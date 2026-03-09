@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QLVN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>HRM System</h2>
+            <nav>
+                <ul>
+                    <li class="active"><i class="fas fa-users"></i> Nhân viên</li>
+                    <li><i class="fas fa-file-contract"></i> Hợp đồng</li>
+                    <li><i class="fas fa-chart-line"></i> Báo cáo</li>
+                    <li><i class="fas fa-cog"></i> Cài đặt</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Danh sách Nhân viên</h1>
+                <button class="btn-add" onclick="toggleModal()"><i class="fas fa-plus"></i> Thêm mới</button>
+            </header>
+
+            <section class="filters">
+                <input type="text" placeholder="Tìm tên, mã nhân viên...">
+                <select>
+                    <option>Tất cả phòng ban</option>
+                    <option>Kỹ thuật</option>
+                    <option>Nhân sự</option>
+                </select>
+            </section>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã NV</th>
+                            <th>Họ và Tên</th>
+                            <th>Phòng ban</th>
+                            <th>Chức vụ</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>NV001</td>
+                            <td>
+                                <div class="user-info"><strong>Nguyễn Văn A</strong></div>
+                            </td>
+                            <td>Kỹ thuật</td>
+                            <td>Lập trình viên</td>
+                            <td><span class="status active">Đang làm việc</span></td>
+                            <td class="actions">
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-trash"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

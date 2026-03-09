@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #4a90e2;
+    --bg-color: #f4f7f6;
+    --sidebar-color: #2c3e50;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    background: var(--sidebar-color);
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+    background: #34495e;
+    color: var(--primary-color);
+}
+
+.sidebar i {
+    margin-right: 10px;
+}
+
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-add {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Table Style */
+
+.table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #fafafa;
+    font-weight: 600;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status.active {
+    background: #e3fcef;
+    color: #00875a;
+}
+
+.actions i {
+    margin-right: 10px;
+    color: #888;
+    cursor: pointer;
+}
+
+.actions i:hover {
+    color: var(--primary-color);
+}
+
+
+/* Filters */
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filters input,
+.filters select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
